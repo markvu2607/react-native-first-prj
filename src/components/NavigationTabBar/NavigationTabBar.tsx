@@ -1,3 +1,4 @@
+/* eslint-disable react-native/no-inline-styles */
 import React from 'react';
 import {
   BottomTabBar,
@@ -14,6 +15,8 @@ import NotificationSVG from './components/NotifitcationSVG';
 import AccountSVG from './components/AccountSVG';
 
 const Tab = createBottomTabNavigator();
+
+const TABBAR_HEIGHT = 140;
 
 function UpdateScreen() {
   return (
@@ -90,23 +93,14 @@ function NavigationTabs() {
               position: 'absolute',
               bottom: 0,
               width: '100%',
-              height: '18%',
-              // backgroundColor: 'rgba(0,0,0,0.05)',
-              // shadowOffset: {
-              //   height: 4,
-              //   width: 4,
-              // },
-              // shadowColor: 'red',
-              // backgroundColor: '#d9d9d9',
-              // shadowColor: '#000000',
-              // shadowOpacity: 0.8,
-              // shadowRadius: 2,
-              // shadowOffset: {
-              //   height: 1,
-              //   width: 1,
-              // },
+              height: TABBAR_HEIGHT,
             }}>
-            <BackgroundTabBarSVG width="100%" height="100%" fill="white" />
+            <BackgroundTabBarSVG
+              width="100%"
+              height="100%"
+              fill="white"
+              preserveAspectRatio="none"
+            />
           </View>
           <BottomTabBar {...props} />
         </React.Fragment>

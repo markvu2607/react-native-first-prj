@@ -1,12 +1,13 @@
 import React from 'react';
 import Svg, {Path, G, Defs} from 'react-native-svg';
 
-function BackgroundTabBarSVG({width, height, fill}) {
+function BackgroundTabBarSVG({width, height, fill, preserveAspectRatio}) {
   return (
     <Svg
       width={width}
       height={height}
       fill={fill}
+      preserveAspectRatio={preserveAspectRatio}
       viewBox="0 0 375 138"
       xmlns="http://www.w3.org/2000/svg">
       <G filter="url(#filter0_d_282_11793)">
